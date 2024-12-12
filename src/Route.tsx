@@ -47,7 +47,7 @@ export const Route = ({
                         <Button onClick={handleRemoveFTRoute} title={'X'}/>
                     </td>
                     <td className={`${styles.ftCell} ${styles.pointerCursor}`}>
-                        <UpdateItem oldTitle={route.from} callBack={(newFrom: string) => handleUpdateRouteFrom(newFrom)}/>
+                        <UpdateItem oldTitle={route.from} callBack={ handleUpdateRouteFrom}/>
                     </td>
                     <td className={`${styles.ftCell} ${styles.pointerCursor}`}>
                         ➔
@@ -57,7 +57,7 @@ export const Route = ({
                     </td>
                     <td className={styles.checkboxContainer}>
                         <label>
-                            <CheckBox isDone={route.isBooked} updateCheckBox={(isDone: boolean) => handleToggleFTIsBooked(isDone)}/>
+                            <CheckBox isDone={route.isBooked} updateCheckBox={handleToggleFTIsBooked}/>
                             {route.isBooked ? ' Booked' : ' Available'}
                         </label>
                     </td>
